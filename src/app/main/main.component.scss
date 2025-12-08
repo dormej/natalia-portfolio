@@ -160,10 +160,9 @@
 }
 
 
-
 .carousel-container {
-  width: 100%;                /* ogranicza szerokość slidera */
-  overflow: hidden;           /* ukrywa nadmiar poza kontenerem */
+  width: 100%;
+  overflow: hidden;
   padding: 20px 0;
 }
 
@@ -173,19 +172,20 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* dla iOS */
   padding: 0 20px;
   margin: 0;
   list-style: none;
-
-  /* ukrycie pasków przewijania */
   scrollbar-width: none;
 }
+
 .slider::-webkit-scrollbar {
   display: none;
 }
 
 .slider li {
-  flex: 0 0 300px;
+  flex: 0 0 80%;               /* lepiej procentowo dla mobile */
+  max-width: 300px;             /* desktop max szerokość */
   height: 300px;
   background-color: #eee;
   border: 1px solid #ccc;
