@@ -63,16 +63,12 @@
     background-size: cover;     // wypełnia całą powierzchnię
     background-position: bottom;
     background-repeat: no-repeat;
-    height: 25vh;
-    min-height: 250px;               // wypełnia całą kolumnę
+    width: 100%;
+    aspect-ratio: 1 / 1;
   }
 
   .title h1 {
     line-height: 1.1;
-  }
-
-  .description-content {
-    margin-top: 2rem;
   }
 
   .description-content h2 {
@@ -92,6 +88,10 @@
   }
 }
 
+.title-sm {
+  font-size: 30px;
+}
+
   .full-page-bg {
     display: none;
   }
@@ -101,7 +101,7 @@
     }
 
 /* Responsywność: kolumny jedna pod drugą na małych ekranach */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .title-lg {
     display: none;
   }
@@ -120,18 +120,25 @@
 
     .title-sm {
       display: block;
+      line-height: 20px;
 
       h2 {
-        font-size: 14vw;
+        font-size: 10vw;
       }
     }
   }
 
-  .description-content p {
-    margin-bottom: 0;
-    padding-right: 0;
+  .description-content {
+    h3 {
+      font-weight: 100;
+      color: #F16036;
+      font-size: 30px;
+    }
   }
-
+  .description-content p {
+    margin-bottom: 0 !important;
+    padding-right: 0 !important;
+  }
 }
 
 
