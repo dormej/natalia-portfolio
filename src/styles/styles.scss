@@ -55,8 +55,14 @@
 // $card-width: 400px;
 // $card-height: 600px;
 
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 h1 {

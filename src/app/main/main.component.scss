@@ -55,7 +55,19 @@
     height: 100%;               // wypełnia całą kolumnę
     margin: 0;
     padding: 0;
-    width: 50vw;
+
+  position: absolute;       /* zajmuje dokładnie połowę ekranu, niezależnie od rodzica */
+  top: 0;
+  right: 0;               /* albo right: 0, jeśli prawa połowa */
+  width: 50vw;           /* dokładnie 50% viewport */
+  height: 100vh;         /* pełna wysokość ekranu */
+  
+  background-image: url('../../assets/images/foto.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  
+
   }
 
   .full-page-bg {
@@ -96,9 +108,9 @@
     display: none;
   }
 
-    .title-sm {
-      display: none;
-    }
+  .title-sm {
+    display: none;
+  }
 
 /* Responsywność: kolumny jedna pod drugą na małych ekranach */
 @media (max-width: 1000px) {
@@ -118,6 +130,8 @@
       display: block;
     }
 
+    }
+
     .title-sm {
       display: block;
       line-height: 20px;
@@ -125,7 +139,7 @@
       h2 {
         font-size: 10vw;
       }
-    }
+
   }
 
   .description-content {
@@ -136,41 +150,54 @@
     }
   }
   .description-content p {
-    margin-bottom: 0 !important;
     padding-right: 0 !important;
   }
 }
 
+.projects-content {
+  color: #F16036;
+  background-color: white;
+}
 
 
-// .get-to-know-me {
-//   height: 100vh;
-//   position: relative;;
-//   background: #E4E4E4;
-//   align-content: center;
 
-//   .title h1 {
-//     line-height: 1.1;
-//   }
+.carousel-container {
+  width: 100%;                /* ogranicza szerokość slidera */
+  overflow: hidden;           /* ukrywa nadmiar poza kontenerem */
+  padding: 20px 0;
+}
 
-//   .description-content h2 {
-//     font-size: clamp(1.5rem, 2.5vw, 2rem);
-//     margin-bottom: 1rem;
-//   }
+.slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 0 20px;
+  margin: 0;
+  list-style: none;
 
-//   .description-content p {
-//     font-size: clamp(1rem, 1.8vw, 1.2rem);
-//     margin-bottom: 1rem;
-//   }
+  /* ukrycie pasków przewijania */
+  scrollbar-width: none;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}
 
-//   .half-page-bg {
-//     min-height: 100vh; // minimalna wysokość dla małych ekranów
-//   }
-// }
+.slider li {
+  flex: 0 0 300px;
+  height: 300px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  scroll-snap-align: start;
 
-// /* Opcjonalnie dodatkowe responsywne style */
-// @media (max-width: 767.98px) {
-//   .half-page-bg {
-//     margin-top: 2rem;
-//   }
-// }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.slider li:nth-child(even) {
+  background-color: cyan;
+}

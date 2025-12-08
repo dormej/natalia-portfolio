@@ -26,4 +26,5 @@ export class MainComponent {
     this.heroContent.nativeElement.style.opacity = opacity.toString();
     this.heroBg.nativeElement.style.opacity = opacity.toString();
   }
+  
 }
