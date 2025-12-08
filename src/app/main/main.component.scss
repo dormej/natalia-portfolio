@@ -63,7 +63,8 @@
     background-size: cover;     // wypełnia całą powierzchnię
     background-position: bottom;
     background-repeat: no-repeat;
-    height: 25vh;               // wypełnia całą kolumnę
+    height: 25vh;
+    min-height: 250px;               // wypełnia całą kolumnę
   }
 
   .title h1 {
@@ -125,6 +126,12 @@
       }
     }
   }
+
+  .description-content p {
+    margin-bottom: 0;
+    padding-right: 0;
+  }
+
 }
 
 
