@@ -1,0 +1,162 @@
+.hero {
+  height: 100vh;
+  width: 100%;
+
+  .hero-bg {
+    object-fit: cover;
+    z-index: -1;
+    transition: opacity 0.2s linear;
+  }
+
+  .hero-content {
+    opacity: 1;
+    align-self: center;
+    transition: opacity 0.2s linear;
+
+  h1 {
+    font-size: var(--fs-h1);
+    line-height: var(--lh-h);
+  }
+
+
+    span.font-bold {
+      font-weight: bold;
+    }
+
+    .t-white {
+      color: white;
+    }
+  }
+}
+
+.content {
+  padding: 2rem;
+  background: white;
+}
+
+
+.get-to-know-me {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background: #E4E4E4;
+  position: relative;
+  min-height: 100vh;
+
+  .col-md-6 {
+    height: 100%; // pełna wysokość sekcji
+  }
+
+  .half-page-bg {
+    background-image: url('../../assets/images/foto.jpg');
+    background-size: cover;     // wypełnia całą powierzchnię
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 100%;               // wypełnia całą kolumnę
+    margin: 0;
+    padding: 0;
+    width: 50vw;
+  }
+
+  .full-page-bg {
+    background-image: url('../../assets/images/foto.jpg');
+    background-size: cover;     // wypełnia całą powierzchnię
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 25vh;               // wypełnia całą kolumnę
+  }
+
+  .title h1 {
+    line-height: 1.1;
+  }
+
+  .description-content {
+    margin-top: 2rem;
+  }
+
+  .description-content h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    margin-bottom: 4rem;
+  }
+
+  .description-content p {
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    margin-bottom: 1rem;
+    padding-right: 4rem;
+  }
+
+  .title-lg, .title-sm {
+    color: #F16036;
+  }
+}
+
+  .full-page-bg {
+    display: none;
+  }
+
+    .title-sm {
+      display: none;
+    }
+
+/* Responsywność: kolumny jedna pod drugą na małych ekranach */
+@media (max-width: 768px) {
+  .title-lg {
+    display: none;
+  }
+
+  .get-to-know-me {
+    flex-direction: column !important;
+    display: block;
+
+    .half-page-bg {
+      display: none;
+    }
+
+    .full-page-bg {
+      display: block;
+    }
+
+    .title-sm {
+      display: block;
+
+      h2 {
+        font-size: 14vw;
+      }
+    }
+  }
+}
+
+
+
+// .get-to-know-me {
+//   height: 100vh;
+//   position: relative;;
+//   background: #E4E4E4;
+//   align-content: center;
+
+//   .title h1 {
+//     line-height: 1.1;
+//   }
+
+//   .description-content h2 {
+//     font-size: clamp(1.5rem, 2.5vw, 2rem);
+//     margin-bottom: 1rem;
+//   }
+
+//   .description-content p {
+//     font-size: clamp(1rem, 1.8vw, 1.2rem);
+//     margin-bottom: 1rem;
+//   }
+
+//   .half-page-bg {
+//     min-height: 100vh; // minimalna wysokość dla małych ekranów
+//   }
+// }
+
+// /* Opcjonalnie dodatkowe responsywne style */
+// @media (max-width: 767.98px) {
+//   .half-page-bg {
+//     margin-top: 2rem;
+//   }
+// }
