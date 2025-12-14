@@ -14,7 +14,15 @@ export class MainComponent {
 
   heroHeight = window.innerHeight;
 
-  ngAfterViewInit() {}
+  ngAfterViewInit() {
+    
+    const video = document.getElementById('myVideo') as HTMLVideoElement;
+    video.muted = true;       // wymagane dla autoplay desktop
+    video.play().catch(() => {
+      console.log('Autoplay zablokowane, trzeba kliknąć przycisk');
+    });
+
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -26,5 +34,6 @@ export class MainComponent {
     this.heroContent.nativeElement.style.opacity = opacity.toString();
     this.heroBg.nativeElement.style.opacity = opacity.toString();
   }
+
   
 }
