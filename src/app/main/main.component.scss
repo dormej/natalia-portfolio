@@ -286,7 +286,7 @@ footer {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  padding: 32px 64px;
+  padding: 0 64px 32px; 
   list-style: none;
   margin: 0;
 }
