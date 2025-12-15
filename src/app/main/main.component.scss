@@ -275,6 +275,7 @@ footer {
   position: relative;
   width: 100vw;
   overflow: hidden;
+  background-color: white;
 }
 
 /* scroll container */
@@ -301,7 +302,7 @@ footer {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(8px);
   border-radius: 16px;
-  padding: 32px;
+  // padding: 32px;
 }
 
 /* desktop – więcej kart */

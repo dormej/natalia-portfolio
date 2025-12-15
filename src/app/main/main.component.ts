@@ -24,18 +24,6 @@ export class MainComponent {
 
   }
 
-@ViewChild('cards', { static: true }) cards!: ElementRef<HTMLUListElement>;
-
-scroll(dir: 'next' | 'prev') {
-  const card = this.cards.nativeElement.querySelector('.card') as HTMLElement;
-  const offset = card.offsetWidth + 24;
-
-  this.cards.nativeElement.scrollBy({
-    left: dir === 'next' ? offset : -offset,
-    behavior: 'smooth'
-  });
-}
-
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollY = window.pageYOffset || document.documentElement.scrollTop;
