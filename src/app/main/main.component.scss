@@ -119,7 +119,7 @@
 .small-screen {
   display: none;
 }
-/* Responsywność: kolumny jedna pod drugą na małych ekranach */
+
 @media (max-width: 1000px) {
   .large-screen {
     display: none;
@@ -208,11 +208,9 @@
 }
 
 .slider img {
-  // flex: 0 0 80%;               /* lepiej procentowo dla mobile */
   scroll-snap-align: start;
   display: flex;
   align-items: center;
-  // justify-content: center;
   text-align: center;
   max-width: 2rem;
 }
@@ -221,7 +219,7 @@
 footer {
   bottom: 0;
   padding-top: 1rem;
-  background-color: white;
+  background-color: #E4E4E4;
 
   ul {
     display: flex;
@@ -286,7 +284,7 @@ footer {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  padding: 0 64px 32px; 
+  padding: 0 64px 64px; 
   list-style: none;
   margin: 0;
 }
@@ -299,7 +297,8 @@ footer {
 /* karta */
 .card {
   scroll-snap-align: start;
-  min-width: 100%;
+  min-width: 200px;
+  width: 15rem;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(8px);
   border-radius: 16px;
@@ -307,7 +306,7 @@ footer {
 }
 
 /* desktop – więcej kart */
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .card {
     min-width: calc(25% - 16px);
   }
