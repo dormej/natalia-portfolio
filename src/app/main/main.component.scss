@@ -120,6 +120,10 @@
   display: none;
 }
 
+a {
+  color: inherit;
+}
+
 @media (max-width: 1000px) {
   .large-screen {
     display: none;
